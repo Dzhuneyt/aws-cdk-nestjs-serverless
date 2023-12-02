@@ -1,14 +1,9 @@
-# Welcome to your CDK TypeScript project
+Quick start:
 
-This is a blank project for CDK development with TypeScript.
+1. pnpm i --shamefully-hoist
+2. Build the backend: cd nestjs && pnpm run build
+3. Deploy the infrastructure (that includes the backend): cd cdk && npx cdk deploy
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Issues so far:
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+* Can't use nest.js inside a PNPM workspace, because libraries like 'tslib' are not available inside the nest.js node_modules folder but they are required at runtime
