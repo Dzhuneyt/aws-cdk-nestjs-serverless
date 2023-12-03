@@ -1,9 +1,9 @@
 import {NestFactory} from '@nestjs/core';
 import {Callback, Context, Handler} from 'aws-lambda';
 import {AppModule} from './app.module';
-import { configure as serverlessExpress } from '@vendia/serverless-express';
+import {configure as serverlessExpress} from '@vendia/serverless-express';
 
-let s: Handler;
+let _cachedServer: Handler;
 
 async function bootstrap(): Promise<Handler> {
     const app = await NestFactory.create(AppModule);
@@ -18,6 +18,6 @@ export const handler: Handler = async (
     context: Context,
     callback: Callback,
 ) => {
-    s = s ?? (await bootstrap());
-    return s(event, context, callback);
+    _cachedServer = _cachedServer ?? (await bootstrap());
+    return _cachedServer(event, context, callback);
 };
