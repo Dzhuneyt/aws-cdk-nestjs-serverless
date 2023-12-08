@@ -34,6 +34,5 @@ export class AwsCdkNestjsPrototypeStack extends cdk.Stack {
         api.root.addMethod('ANY', new LambdaIntegration(dockerImageFunction, {
             proxy: true,
         }))
-        api.latestDeployment?.addToLogicalId(Date.now());
     }
 }
