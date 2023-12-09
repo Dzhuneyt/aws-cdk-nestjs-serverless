@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/cdk/cdk.out" />
       <excludeFolder url="file://$MODULE_DIR$/nestjs/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/cdk-lambda/cdk.out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
