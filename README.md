@@ -18,3 +18,9 @@ Issues so far:
   community (https://github.com/evanw/esbuild/issues/104#issuecomment-627645920
   and https://github.com/nestjs/nest-cli/issues/731#issuecomment-1041573532)
 * SWC support: https://github.com/nestjs/nest-cli/issues/731#issuecomment-1358366880
+
+Disadvantages of Fargate (vs Lambda):
+
+* Failures in deployment take forever to rollback
+* The Application Load Balancer takes forever to start routing traffic to the service because of health checks
+* Scale up events when as utilization reaches 100% takes - 5-6 seconds for Lambda and 1-2 minutes for ECS

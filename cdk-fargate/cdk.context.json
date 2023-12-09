@@ -1,0 +1,61 @@
+{
+  "vpc-provider:account=176218606710:filter.isDefault=true:region=us-east-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0bba553c4d3e60d22",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "176218606710",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0d4cf7325edcd5302",
+            "cidr": "172.31.80.0/20",
+            "availabilityZone": "us-east-1a",
+            "routeTableId": "rtb-0f3c41f1c2f4931ca"
+          },
+          {
+            "subnetId": "subnet-007779f171c96b1ec",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-1b",
+            "routeTableId": "rtb-0f3c41f1c2f4931ca"
+          },
+          {
+            "subnetId": "subnet-0b0ea5b11a130fe19",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-1c",
+            "routeTableId": "rtb-0f3c41f1c2f4931ca"
+          },
+          {
+            "subnetId": "subnet-0e06744e7de432637",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-1d",
+            "routeTableId": "rtb-0f3c41f1c2f4931ca"
+          },
+          {
+            "subnetId": "subnet-09137411a95c9a54e",
+            "cidr": "172.31.48.0/20",
+            "availabilityZone": "us-east-1e",
+            "routeTableId": "rtb-0f3c41f1c2f4931ca"
+          },
+          {
+            "subnetId": "subnet-07958e146c0ed8052",
+            "cidr": "172.31.64.0/20",
+            "availabilityZone": "us-east-1f",
+            "routeTableId": "rtb-0f3c41f1c2f4931ca"
+          }
+        ]
+      }
+    ]
+  },
+  "availability-zones:account=176218606710:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "ami:account=176218606710:filters.image-type.0=machine:filters.name.0=amzn-ami-vpc-nat-*:filters.state.0=available:owners.0=amazon:region=us-east-1": "ami-0e64637f6498ed00f"
+}
